@@ -28,7 +28,9 @@ python3 CPMVAE.py
 ```
 
 ## The Socket Programming
-A Python socket programming implementation of CPMAVE to simulate the flow of our protocol messages between the sender vehicle and the TMA in a real-time experiment and to measure the end-to-end latency. The Raspberry Pi 4 is used to simulate the OBU "On Board Unit" of the sender vehicle while two Lenovo ThinkStations with 16GB of memory and an Intel 8-Core i7-10700 CPU clocked at 2.90GHz acted as the ECA and the TMA, respectively.
+A Python socket programming implementation of CPMAVE to simulate the flow of our protocol messages between the sender vehicle and the TMA in a real-time experiment and to measure the end-to-end latency. The Raspberry Pi 4 is used to simulate the OBU "On Board Unit" of the sender vehicle while two Lenovo ThinkStations with 16GB of memory and an Intel 8-Core i7-10700 CPU clocked at 2.90GHz acted as the ECA and the TMA, respectively. 
+
+The Raspberry Pi 4 and the two Thinkstations are connected to a local network. The static IP addresses for the TMA, vehicle, and ECA are set to 192.168.122.200, 192.168.122.201, and 192.168.122.202, respectively. Additionally, the communication between the ECA and the vehicle occurs over port 5000, while the communication between the TMA and the vehicle occurs over port 5001.
 
 ### Running the Socket Programming
 Start the ECA on the ThinkStation. The ECA will listen on port 5001:
@@ -42,7 +44,7 @@ cd "Socket Programming"
 python3 CPMAVE_TMA.py
 ```
 
-Start the sender vehicle on the Raspberry Pi 4. The sender vehicle will listen on port 5002.
+Start the sender vehicle on the Raspberry Pi 4.
 ```
 cd "Socket Programming"
 python3 CPMAVE_Vehicle.py
