@@ -1,0 +1,9 @@
+Package      Version
+------------ -------
+ecdsa        0.18.0
+fastecdsa    2.3.2
+pip          24.0
+pycryptodome 3.20.0
+setuptools   67.7.1
+six          1.16.0
+wheel        0.40.0
